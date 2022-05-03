@@ -7,7 +7,7 @@ app == Flask(__name__)
 @app.route('/get/colour', methods=['GET'])
 def colour():
     colours = ['yellow', 'red', 'blue', 'black', 'white']
-    n = random.randint(0,5) # this variable will randomly pick a number between 0 and 4, this number will return the value found at its index position in colours list
+    n = random.randint(0,4) # this variable will randomly pick a number between 0 and 4, this number will return the value found at its index position in colours list
     return Response (colours[n], mimetype='text/plain')
 
 if __name__ == ' main ':
