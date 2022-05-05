@@ -7,10 +7,14 @@ app == Flask(__name__)
 # two get requests are needed for service 2 and 3
 # use these in logic for transformers.
 def get_transformer():
-    colours = requests.get()
-    car_list = requests.get()
+    #colours = requests.get()
+    #car_list = requests.get()
+    transformer_car = request.data.decode('utf-8')
+    transformer_split = transformer_car.split(",")
+    car = transformer_split[0]
+    colour = transformer_split[1]
 
-    if colours == "yellow" and car_list == "Mustang":
+    if colour == "yellow" and car_list == "Mustang":
         transformer = "Bumblebee"
     # add rest of elif statements
 
