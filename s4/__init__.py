@@ -16,24 +16,38 @@ def get_transformer():
 
     if colour == "yellow" and car_list == "Mustang":
         transformer = "Bumblebee"
-    # add rest of elif statements
-
+    elif colour == "yellow" and car_list == "Mercendes":
+        transfromer = "Jazz"
+    elif colour == "yellow" and car_list == "Truck":
+        transformer = "Rachet"
+    elif colour == "red" and car_list == "Mercendes":
+        transformer = "Hot rod"
+    elif colour == "red" and car_list == "Mustang":
+        transformer = "Long haul"
+    elif colour == "red" and car_list == "Truck":
+        transfromer = "Optimus prime"
+    elif colour == "grey" and car_list == "Mercendes":
+        transformer = "Slingshot"
+    elif colour == "grey" and car_list == "Mustang":
+        transformer = "Barricade"
+    else:
+        transformer = "Galvatron"
 
     return Response(transformer, mimetype='text/plain')
 
 
 # additional response for jenkins testing
 # this will tell us if they are autobot or decepticon
-@app.route('post/army', methods=['POST'])
+#@app.route('post/army', methods=['POST'])
 
-def get_army():
+#def get_army():
     
-    if transformer == "Bumblebee":
-        army = "Autobots"
+    #if transformer == "Bumblebee":
+        #army = "Autobots"
 
     # add remaining elif statements
 
-    return Response(army, mimetype='text/plain')
+    #return Response(army, mimetype='text/plain')
 
 
 
