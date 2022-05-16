@@ -5,8 +5,8 @@ app == Flask(__name__)
 
 @app.route('/get/car')
 def cars():
-    car_list = ["Audi", "Mercedes", "Mustang", "Truck", "BMW" ]
-    n = random.randint(0,4)
+    car_list = ["Mercedes", "Mustang", "Truck" ]
+    n = random.randint(0,2)
     return Response (car_list[n], mimetype='text/plain')
 
 if __name__ == ' main ':
