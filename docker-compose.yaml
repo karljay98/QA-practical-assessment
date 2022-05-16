@@ -1,13 +1,30 @@
 version: "3.8"
 services:
   service1:
-    image: karljay98/transformers1
+    image: karljay98/transformers1:latest
     build: ./s1
     container_name: service1
     ports:
     - published: 5000
       target: 5000
   service2:
-
+    image: karljay98/transformers2:latest
+    build: ./s2
+    container_name: service2
+    ports:
+    - published: 5001
+      target: 5001
   service3:
-  service4: 
+    image: karljay98/transformers3:latest
+    build: ./s3
+    container_name: service1
+    ports:
+    - published: 5002
+      target: 5002
+  service4:
+    image: karljay98/transformers4:latest
+    build: ./s4
+    container_name: service4
+    ports:
+    - published: 5003
+      target: 5003
