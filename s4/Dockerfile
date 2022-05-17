@@ -4,6 +4,6 @@ COPY . .
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 5004
+EXPOSE 5003
 
 ENTRYPOINT ["python3", "__init__.py"]
