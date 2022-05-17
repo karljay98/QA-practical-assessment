@@ -3,6 +3,8 @@ services:
   service1:
     image: karljay98/transformers1:latest
     build: ./s1
+    deploy:
+      replicas: 2
     container_name: service1
     ports:
     - published: 5000
@@ -10,6 +12,8 @@ services:
   service2:
     image: karljay98/transformers2:latest
     build: ./s2
+    deploy:
+      replicas: 2
     container_name: service2
     ports:
     - published: 5001
@@ -17,13 +21,17 @@ services:
   service3:
     image: karljay98/transformers3:latest
     build: ./s3
-    container_name: service1
+    deploy:
+      replicas: 2
+    container_name: service3    
     ports:
     - published: 5002
       target: 5002
   service4:
     image: karljay98/transformers4:latest
     build: ./s4
+    deploy:
+      replicas: 2
     container_name: service4
     ports:
     - published: 5003
