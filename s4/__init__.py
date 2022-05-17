@@ -9,22 +9,22 @@ app == Flask(__name__)
 def get_transformer():
     transformer_car = request.data.decode('utf-8')
     transformer_split = transformer_car.split(",")
-    car = transformer_split[0]
-    colour = transformer_split[1]
+    car = transformer_split[1]
+    colour = transformer_split[0]
 
     if colour == "yellow" and car_list == "Mustang":
         transformer = "Bumblebee"
-    elif colour == "yellow" and car_list == "Mercendes":
+    elif colour == "yellow" and car_list == "Mercedes":
         transfromer = "Jazz"
     elif colour == "yellow" and car_list == "Truck":
         transformer = "Rachet"
-    elif colour == "red" and car_list == "Mercendes":
+    elif colour == "red" and car_list == "Mercedes":
         transformer = "Hot rod"
     elif colour == "red" and car_list == "Mustang":
         transformer = "Long haul"
     elif colour == "red" and car_list == "Truck":
         transfromer = "Optimus prime"
-    elif colour == "grey" and car_list == "Mercendes":
+    elif colour == "grey" and car_list == "Mercedes":
         transformer = "Slingshot"
     elif colour == "grey" and car_list == "Mustang":
         transformer = "Barricade"
