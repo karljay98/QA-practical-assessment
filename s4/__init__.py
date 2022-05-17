@@ -34,6 +34,8 @@ def get_transformer():
         transformer = "Galvatron"
 
     return Response(transformer, mimetype='text/plain')
+if __name__ == '__main__':
+    app.run(port=5003, debug=True, host='0.0.0.0')
 
 
 # additional response for jenkins testing
