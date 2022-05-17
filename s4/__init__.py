@@ -9,7 +9,7 @@ app == Flask(__name__)
 def get_transformer():
     colours = requests.get('http://service1:5000/get/colour')
     car_list = requests.get('http://service1:5000/get/car')
-    transformer_car = request.data.decode('utf-8')
+    transformer = request.data.decode('utf-8')
     transformer_split = transformer_car.split(",")
     car = transformer_split[0]
     colour = transformer_split[1]
