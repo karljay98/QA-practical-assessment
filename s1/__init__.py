@@ -9,8 +9,12 @@ def show_transformer():
     s2 = requests.get('http://service2:5001/get/colour')
     s3 = requests.get('http://service3:5002/get/car')
     transformer = s2+","+s3
+    result = requests.post('http://service4:5003/post/transformer', data=transformer)
 
 
 
 
     return Response(transformer, mimetype='text/plain')
+
+if __name__ == '__main__':
+    app.run(port=5000, debug = True, host='0.0.0.0')
