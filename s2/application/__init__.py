@@ -2,7 +2,7 @@ from flask import Flask, Response
 import random
 
 
-app == Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/get/colour', methods=['GET'])
 def colour():
