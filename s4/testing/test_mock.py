@@ -11,5 +11,35 @@ class TestBase(TestCase):
 
 class TestService4(TestBase):
     def test_bumblebee(self):
-        response = self.client.post(url_for('get_transfromer'))
+
+        response = self.client.post(url_for('get_transfromer'), data='yellow,Mustang')
+        self.assertIN(b'Bumblebee', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='yellow,Merdedes')
+        self.assertIN(b'Jazz', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='yellow,Truck')
+        self.assertIN(b'Rachet', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='red,Mercedes')
+        self.assertIN(b'Hot rod', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='red,Mustang')
+        self.assertIN(b'Long haul', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='red,Mercedes')
+        self.assertIN(b'Hot rod', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='red,Truck')
+        self.assertIN(b'Optimus prime', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='grey,Mercedes')
+        self.assertIN(b'Slingshot', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='grey,Mustang')
+        self.assertIN(b'Barricade', response.data)
+
+        response = self.client.post(url_for('get_transfromer'), data='grey,Truck')
+        self.assertIN(b'Galvatron', response.data)
+
 
