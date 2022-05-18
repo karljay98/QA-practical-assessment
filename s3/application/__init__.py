@@ -1,7 +1,7 @@
 from flask import Flask, Response
 import random
 
-app == Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/get/car')
 def cars():
