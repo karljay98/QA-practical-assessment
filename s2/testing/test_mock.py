@@ -2,7 +2,7 @@ from flask import url_for
 from flask_testing import TestCase
 import requests_mock
 
-from s2 import app
+from application import app
 
 class TestBase(TestCase):
     def create_app(self):
