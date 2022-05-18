@@ -2,7 +2,7 @@ from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
 import requests_mock
-
+import pytest
 from application import app
 
 class TestBase(TestCase):
@@ -72,7 +72,7 @@ class TestService1(TestBase):
             m.get('http://service3:5002/get/car', text='Mustang')
             m.post('http://service4:5003/post/transformer',text='grey,Mustang')
             response = self.client.get(url_for('show_transformer'))
-            self.assertIn(b'grey,Barricade', response.data)
+            self.assertIn(b'grey,Mustang', response.data)
 
     def test_galvatron(self):
         with requests_mock.Mocker() as m:
