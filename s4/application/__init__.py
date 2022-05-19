@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_transformer():
     transformer_car = request.data.decode('utf-8')
     transformer_split = transformer_car.split(",")
-    car = transformer_split[1]
+    car_list = transformer_split[1]
     colour = transformer_split[0]
 
     if colour == "yellow" and car_list == "Mustang":
