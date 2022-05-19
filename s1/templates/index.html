@@ -1,10 +1,21 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{ title }} - Page
+        </title>
 
-{% block body %}
+    </head>
 
-<a href="{{ url_for('get_transformer') }}">Transformer</a>
+<body>
+        <h1>Transformer: {{ transformer }}</h1>
+</body>
 
 
 
 
-{% endblock body %}
+
+
+
+
+</html>

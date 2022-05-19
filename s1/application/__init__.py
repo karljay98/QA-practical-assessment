@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, url_for
+from flask import Flask, render_template, url_for
 import requests
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ def show_transformer():
     s3 = requests.get('http://service3:5002/get/car').text
     transformer = s2+","+s3 # concatenation of colour and car which is sent to service 4
     result = requests.post('http://service4:5003/post/transformer', data=transformer)
-    return Response(transformer, mimetype='text/plain')
+    return render_template('idex.html', title='Transfromer generator'transformer=transformer)
 
 if __name__ == '__main__':
     app.run(port=5000, debug = True, host='0.0.0.0')
