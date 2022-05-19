@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from flask import url_for, request
+from flask import url_for
 from flask_testing import TestCase
 
 from application import app
@@ -13,34 +13,39 @@ class TestBase(TestCase):
 class TestService4(TestBase):
     def test_bumblebee(self):
 
-        response = self.client.post(url_for('get_transfromer'), data='yellow,Mustang')
-        self.assertIN(b'Bumblebee', response.data)
+        response = self.client.post(url_for('get_transformer'), data='yellow,Mustang')
+        self.assertIn(b'Bumblebee', response.data)
 
-        response = self.client.post(url_for('get_transfromer'), data='yellow,Merdedes')
-        self.assertIN(b'Jazz', response.data)
+    def test_jazz(self):
+        response = self.client.post(url_for('get_transformer'), data='yellow,Mercedes')
+        self.assertIn(b'Jazz', response.data)
+    
+    def test_rachet(self):
+        response = self.client.post(url_for('get_transformer'), data='yellow,Truck')
+        self.assertIn(b'Rachet', response.data)
+    
+    def test_hotrod(self):
+        response = self.client.post(url_for('get_transformer'), data='red,Mercedes')
+        self.assertIn(b'Hot rod', response.data)
 
-        response = self.client.post(url_for('get_transfromer'), data='yellow,Truck')
-        self.assertIN(b'Rachet', response.data)
+    def test_longhaul(self):
+        response = self.client.post(url_for('get_transformer'), data='red,Mustang')
+        self.assertIn(b'Long haul', response.data)
+    
+    def test_optimusprime(self):
+        response = self.client.post(url_for('get_transformer'), data='red,Truck')
+        self.assertIn(b'Optimus prime', response.data)
 
-        response = self.client.post(url_for('get_transfromer'), data='red,Mercedes')
-        self.assertIN(b'Hot rod', response.data)
+    def test_slingshot(self):
+        response = self.client.post(url_for('get_transformer'), data='grey,Mercedes')
+        self.assertIn(b'Slingshot', response.data)
+    
+    def test_barricade(self):
+        response = self.client.post(url_for('get_transformer'), data='grey,Mustang')
+        self.assertIn(b'Barricade', response.data)
 
-        response = self.client.post(url_for('get_transfromer'), data='red,Mustang')
-        self.assertIN(b'Long haul', response.data)
-
-        response = self.client.post(url_for('get_transfromer'), data='red,Mercedes')
-        self.assertIN(b'Hot rod', response.data)
-
-        response = self.client.post(url_for('get_transfromer'), data='red,Truck')
-        self.assertIN(b'Optimus prime', response.data)
-
-        response = self.client.post(url_for('get_transfromer'), data='grey,Mercedes')
-        self.assertIN(b'Slingshot', response.data)
-
-        response = self.client.post(url_for('get_transfromer'), data='grey,Mustang')
-        self.assertIN(b'Barricade', response.data)
-
-        response = self.client.post(url_for('get_transfromer'), data='grey,Truck')
-        self.assertIN(b'Galvatron', response.data)
+    def test_galvatron(self):
+        response = self.client.post(url_for('get_transformer'), data='grey,Truck')
+        self.assertIn(b'Galvatron', response.data)
 
 

@@ -1,15 +1,15 @@
-from flask import Flask, Response
+from flask import Flask, Response, request
 import requests
 
 app = Flask(__name__)
 
-@app.route('post/transformer', methods =['POST'])
+@app.route('/post/transformer', methods =['POST'])
 # two get requests are needed for service 2 and 3
 # use these in logic for transformers.
 def get_transformer():
     transformer_car = request.data.decode('utf-8')
     transformer_split = transformer_car.split(",")
-    car = transformer_split[1]
+    car_list = transformer_split[1]
     colour = transformer_split[0]
 
     if colour == "yellow" and car_list == "Mustang":
