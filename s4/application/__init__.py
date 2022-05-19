@@ -1,9 +1,9 @@
-from flask import Flask, Response
+from flask import Flask, Response, request
 import requests
 
 app = Flask(__name__)
 
-@app.route('post/transformer', methods =['POST'])
+@app.route('/post/transformer', methods =['POST'])
 # two get requests are needed for service 2 and 3
 # use these in logic for transformers.
 def get_transformer():
