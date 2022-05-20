@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/transformer', methods=['GET', 'POST'])
 # a get request should be made for service 2 and 4
 def show_transformer():
-    s2 = requests.get('http://localhost:5001/get/colour').text
-    s3 = requests.get('http://localhost:5002/get/car').text
+    s2 = requests.get('http://service2:5001/get/colour').text
+    s3 = requests.get('http://service3:5002/get/car').text
     transformer = s2+","+s3 # concatenation of colour and car which is sent to service 4
-    result = requests.post('http://localhost:5003/post/transformer', data=transformer)
+    result = requests.post('http://service4:5003/post/transformer', data=transformer)
     return render_template('index.html', title='Transfromer generator', transformer=result.text, colour=s2, car=s3)
 
 if __name__ == '__main__':
