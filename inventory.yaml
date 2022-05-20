@@ -1,0 +1,6 @@
+all:
+  children:
+    managers:
+      hosts:
+        manager-1:
+
