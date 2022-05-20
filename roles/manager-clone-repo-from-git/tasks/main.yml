@@ -1,0 +1,7 @@
+---
+# tasks file for manager-clone-repo-from-git
+
+- name: Clone a repo with separate git directory
+  ansible.builtin.git:
+    repo: git@github.com:karljay98/QA-practical-assessment.git
+    dest: /home/karlj/QA-practical-assessment
