@@ -8,7 +8,7 @@ pipeline{
                         sh 'cd QA-practical-assessment && git pull'
                     }
                     else{
-                        sh 'git clone git@github.com:karljay98/QA-practical-assessment.git '
+                        sh 'https://github.com/karljay98/QA-practical-assessment.git'
                     }
                 }
             }
