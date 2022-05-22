@@ -4,7 +4,7 @@ all:
       hosts:
         manager-1:
     workers:
-      host:
+      hosts:
         worker-1:
 
   vars:
