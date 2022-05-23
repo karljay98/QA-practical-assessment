@@ -56,5 +56,10 @@ Unfortunately, I was unable to implement nginx and Jenkins, I did write a Jenkin
 
 
 ## Risk Assessment
+
+Initial risk assessment
+
+[risk pt1.docx](https://github.com/karljay98/QA-practical-assessment/files/8757821/risk.pt1.docx)
+
 https://docs.google.com/spreadsheets/d/1nodtkZQhORem74N3cXGjemBx2pv_kwR9UhCzZeuHgZY/edit?usp=sharing
 
