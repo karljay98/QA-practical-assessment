@@ -69,3 +69,31 @@ Unfortunately, I was unable to implement nginx and Jenkins, I did write a Jenkin
 
 https://docs.google.com/spreadsheets/d/1nodtkZQhORem74N3cXGjemBx2pv_kwR9UhCzZeuHgZY/edit?usp=sharing
 
+
+## Test plans
+
+Testing for this project is crucial as it allows the developers to identify if the app works and where potential errors could occur or currently are.
+
+Service 1 results:
+
+![image](https://user-images.githubusercontent.com/71146682/169902518-ec5ce0bd-8e96-40b4-8c30-8c929bbd18ea.png)
+
+Service 2 results:
+
+![image](https://user-images.githubusercontent.com/71146682/169902634-81db92ba-087c-44b6-b85d-deb5e2390378.png)
+
+
+Service 3 results:
+
+![image](https://user-images.githubusercontent.com/71146682/169902725-a55e2c3d-9284-45d9-93cf-45cf2a0c5a11.png)
+
+
+Service 4 results:
+
+![image](https://user-images.githubusercontent.com/71146682/169902783-7a02d845-7c3e-4ad1-b5b1-b4b9c2ba3555.png)
+
+
+
+
+
+
