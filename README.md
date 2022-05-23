@@ -4,7 +4,7 @@
 # Contents
 * [Introduction](#Introduction)
     * [Application](#Application)
-* [Software Planning](#Software planning)
+* [Software Planning](#Software Planning)
     * [Kanban Board](#Kanban-Board)
     * [Risk Assessment](#Risk-Assessment)
     * [Test plans](#Test-plans)
@@ -101,6 +101,16 @@ The Diagram above highlights the whole process of building the CI/CD pipeline wh
 
 The front end design is very simple ans shows the colour, car brand ans transformer generated.
 ![image](https://user-images.githubusercontent.com/71146682/169911940-6d845d3b-4247-4903-a054-47a8db6f1cbc.png)
+
+## Future Improvements
+
+The future improvements which need to be made inclue:
+
+* Use of Jenkins
+* Use of Nginx
+* Explore the use of a SQL server to hold information.
+* Have a more enticing front page as the current one is very basic, maybe include bootstrap templating.
+
 
 
 
