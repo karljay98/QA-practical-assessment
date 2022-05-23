@@ -63,6 +63,7 @@ Unfortunately, I was unable to implement nginx and Jenkins, I did write a Jenkin
 
 ### Developed risk assessment
 
+![image](https://user-images.githubusercontent.com/71146682/169901670-b5eea29e-2282-4cc8-9b4a-7c0b793d6170.png)
 
 ### Full risk assessment
 
