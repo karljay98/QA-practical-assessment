@@ -9,11 +9,6 @@
     * [Risk Assessment](#Risk-Assessment)
     * [Test plans](#Test-plans)
 * [Continous Integration/Deployment pipelines](#Continous-Integration/Deployment-pipelines)
-* [Architectures](#Architectures)
-    * [Docker Compose](#Docker-Compose)
-    * [Docker Swarm](#Docker-Swarm)
-    * [Nginx](#Niginx)
-* [Application Configuration](#Application-Configuration)
 * [Front-End Design](#Front-End-Design)
 * [Future Imporvements](#Future-Improvements)
 
@@ -91,6 +86,25 @@ Service 3 results:
 Service 4 results:
 
 ![image](https://user-images.githubusercontent.com/71146682/169902783-7a02d845-7c3e-4ad1-b5b1-b4b9c2ba3555.png)
+
+Although, the test coverage is not 100%, the lowest coverage score was 89% which is still very good.
+
+
+## Continous Integration/Deployment pipelines
+
+![image](https://user-images.githubusercontent.com/71146682/169903994-e66c9ca5-9efb-4705-997e-e047ddeea5be.png)
+
+
+The Diagram above highlights the whole process of building the CI/CD pipeline which starts at development. At this stage a project tracking system is used (Trello or Jira), programming done using visual studio code which pushes the code to a version control system Github. To build the server Jenkins automates the testing and collection of code from github, this then uses docker-compose to push this to ansible. As the servicer is live ansible deploys the application using docker-swarm.
+
+## Front-End Design 
+
+The front end design is very simple ans shows the colour, car brand ans transformer generated.
+![image](https://user-images.githubusercontent.com/71146682/169911940-6d845d3b-4247-4903-a054-47a8db6f1cbc.png)
+
+
+
+
 
 
 
