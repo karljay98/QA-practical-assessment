@@ -57,10 +57,14 @@ Unfortunately, I was unable to implement nginx and Jenkins, I did write a Jenkin
 
 ## Risk Assessment
 
-Initial risk assessment
+### Initial risk assessment
 
 ![image](https://user-images.githubusercontent.com/71146682/169899580-42523e74-f9b0-41f1-9383-0f721f8e0e13.png)
 
+### Developed risk assessment
+
+
+### Full risk assessment
 
 https://docs.google.com/spreadsheets/d/1nodtkZQhORem74N3cXGjemBx2pv_kwR9UhCzZeuHgZY/edit?usp=sharing
 
